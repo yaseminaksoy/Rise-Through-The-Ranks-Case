@@ -21,7 +21,7 @@ public class PersonalController {   //http://localhost:8080/personals
     private String topic;
 
     private final KafkaTemplate<String,String> kafkaTemplate;
-    public int s=LocalDateTime.now().getSecond();
+
 
     @GetMapping
     public String getPersonal(){

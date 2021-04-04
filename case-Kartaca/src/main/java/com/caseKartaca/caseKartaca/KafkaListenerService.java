@@ -23,10 +23,11 @@ public class KafkaListenerService {
         long endTime = System.currentTimeMillis();
         long responseTime = endTime-startTime;
         log.info("Message received.. Message : {} ",
-                messageArray[0]+", "+responseTime+" ms");
+                messageArray[0]+", "+"Response time: "+responseTime+" ms , "+"Timestamp: "+startTime);
         Data data = new Data();
         data.setMethodName(messageArray[0]);
         data.setResponseTime(responseTime+" ms");
+        data.setTimestamp(startTime+"");
         dataRepository.save(data);
     }
 }

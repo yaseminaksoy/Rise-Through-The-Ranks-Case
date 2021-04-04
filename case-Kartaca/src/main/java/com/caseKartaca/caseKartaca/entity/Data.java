@@ -9,6 +9,7 @@ public class Data {
     private String id;
     private String methodName;
     private String responseTime;
+    private String timestamp;
 
     public String getId() {
         return id;
@@ -32,5 +33,13 @@ public class Data {
 
     public void setResponseTime(String responseTime) {
         this.responseTime = responseTime;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
     }
 }
